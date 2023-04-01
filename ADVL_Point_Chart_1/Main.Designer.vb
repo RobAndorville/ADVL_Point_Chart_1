@@ -245,11 +245,10 @@ Partial Class Main
         Me.txtAreaName = New System.Windows.Forms.TextBox()
         Me.Label62 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.txtTop = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.txtLeft = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnOpenParentDir = New System.Windows.Forms.Button()
+        Me.btnOpenArchive = New System.Windows.Forms.Button()
+        Me.btnCreateArchive = New System.Windows.Forms.Button()
+        Me.btnShowProjectInfo = New System.Windows.Forms.Button()
         Me.chkConnect = New System.Windows.Forms.CheckBox()
         Me.btnOpenProject = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -257,8 +256,6 @@ Partial Class Main
         Me.txtProNetName = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnOpenAppDir = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.btnOpenSystem = New System.Windows.Forms.Button()
         Me.btnOpenData = New System.Windows.Forms.Button()
         Me.btnOpenSettings = New System.Windows.Forms.Button()
@@ -517,7 +514,7 @@ Partial Class Main
         Series1.Legend = "Legend1"
         Series1.Name = "Series1"
         Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(1039, 426)
+        Me.Chart1.Size = New System.Drawing.Size(949, 426)
         Me.Chart1.TabIndex = 85
         Me.Chart1.Text = "Chart1"
         '
@@ -2511,11 +2508,10 @@ Partial Class Main
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.txtTop)
-        Me.TabPage2.Controls.Add(Me.Label15)
-        Me.TabPage2.Controls.Add(Me.txtLeft)
-        Me.TabPage2.Controls.Add(Me.Label14)
-        Me.TabPage2.Controls.Add(Me.Label5)
+        Me.TabPage2.Controls.Add(Me.btnOpenParentDir)
+        Me.TabPage2.Controls.Add(Me.btnOpenArchive)
+        Me.TabPage2.Controls.Add(Me.btnCreateArchive)
+        Me.TabPage2.Controls.Add(Me.btnShowProjectInfo)
         Me.TabPage2.Controls.Add(Me.chkConnect)
         Me.TabPage2.Controls.Add(Me.btnOpenProject)
         Me.TabPage2.Controls.Add(Me.Label13)
@@ -2523,8 +2519,6 @@ Partial Class Main
         Me.TabPage2.Controls.Add(Me.txtProNetName)
         Me.TabPage2.Controls.Add(Me.Label9)
         Me.TabPage2.Controls.Add(Me.btnOpenAppDir)
-        Me.TabPage2.Controls.Add(Me.Label7)
-        Me.TabPage2.Controls.Add(Me.Label17)
         Me.TabPage2.Controls.Add(Me.btnOpenSystem)
         Me.TabPage2.Controls.Add(Me.btnOpenData)
         Me.TabPage2.Controls.Add(Me.btnOpenSettings)
@@ -2564,46 +2558,44 @@ Partial Class Main
         Me.TabPage2.Text = "Project Information"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'txtTop
+        'btnOpenParentDir
         '
-        Me.txtTop.Location = New System.Drawing.Point(230, 396)
-        Me.txtTop.Name = "txtTop"
-        Me.txtTop.Size = New System.Drawing.Size(59, 20)
-        Me.txtTop.TabIndex = 308
+        Me.btnOpenParentDir.Location = New System.Drawing.Point(125, 396)
+        Me.btnOpenParentDir.Name = "btnOpenParentDir"
+        Me.btnOpenParentDir.Size = New System.Drawing.Size(125, 22)
+        Me.btnOpenParentDir.TabIndex = 311
+        Me.btnOpenParentDir.Text = "Open Parent Directory"
+        Me.ToolTip1.SetToolTip(Me.btnOpenParentDir, "Open the Parent directory")
+        Me.btnOpenParentDir.UseVisualStyleBackColor = True
         '
-        'Label15
+        'btnOpenArchive
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(195, 399)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(29, 13)
-        Me.Label15.TabIndex = 307
-        Me.Label15.Text = "Top:"
+        Me.btnOpenArchive.Location = New System.Drawing.Point(354, 396)
+        Me.btnOpenArchive.Name = "btnOpenArchive"
+        Me.btnOpenArchive.Size = New System.Drawing.Size(94, 22)
+        Me.btnOpenArchive.TabIndex = 310
+        Me.btnOpenArchive.Text = "Open Archive"
+        Me.ToolTip1.SetToolTip(Me.btnOpenArchive, "Open a project archive file")
+        Me.btnOpenArchive.UseVisualStyleBackColor = True
         '
-        'txtLeft
+        'btnCreateArchive
         '
-        Me.txtLeft.Location = New System.Drawing.Point(121, 396)
-        Me.txtLeft.Name = "txtLeft"
-        Me.txtLeft.Size = New System.Drawing.Size(59, 20)
-        Me.txtLeft.TabIndex = 306
+        Me.btnCreateArchive.Location = New System.Drawing.Point(256, 396)
+        Me.btnCreateArchive.Name = "btnCreateArchive"
+        Me.btnCreateArchive.Size = New System.Drawing.Size(92, 22)
+        Me.btnCreateArchive.TabIndex = 309
+        Me.btnCreateArchive.Text = "Create Archive"
+        Me.ToolTip1.SetToolTip(Me.btnCreateArchive, "Create a project archive file")
+        Me.btnCreateArchive.UseVisualStyleBackColor = True
         '
-        'Label14
+        'btnShowProjectInfo
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(87, 399)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(28, 13)
-        Me.Label14.TabIndex = 305
-        Me.Label14.Text = "Left:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 399)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(72, 13)
-        Me.Label5.TabIndex = 304
-        Me.Label5.Text = "Form position:"
+        Me.btnShowProjectInfo.Location = New System.Drawing.Point(6, 396)
+        Me.btnShowProjectInfo.Name = "btnShowProjectInfo"
+        Me.btnShowProjectInfo.Size = New System.Drawing.Size(113, 22)
+        Me.btnShowProjectInfo.TabIndex = 308
+        Me.btnShowProjectInfo.Text = "Show Project Info"
+        Me.btnShowProjectInfo.UseVisualStyleBackColor = True
         '
         'chkConnect
         '
@@ -2669,24 +2661,6 @@ Partial Class Main
         Me.btnOpenAppDir.TabIndex = 297
         Me.btnOpenAppDir.Text = "Open Application Directory"
         Me.btnOpenAppDir.UseVisualStyleBackColor = True
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(571, 373)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(41, 13)
-        Me.Label7.TabIndex = 296
-        Me.Label7.Text = "d:h:m:s"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(374, 373)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(41, 13)
-        Me.Label17.TabIndex = 295
-        Me.Label17.Text = "d:h:m:s"
         '
         'btnOpenSystem
         '
@@ -2781,7 +2755,7 @@ Partial Class Main
         '
         Me.txtCurrentDuration.Location = New System.Drawing.Point(480, 368)
         Me.txtCurrentDuration.Name = "txtCurrentDuration"
-        Me.txtCurrentDuration.Size = New System.Drawing.Size(85, 20)
+        Me.txtCurrentDuration.Size = New System.Drawing.Size(120, 20)
         Me.txtCurrentDuration.TabIndex = 71
         '
         'Label12
@@ -2797,7 +2771,7 @@ Partial Class Main
         '
         Me.txtTotalDuration.Location = New System.Drawing.Point(283, 370)
         Me.txtTotalDuration.Name = "txtTotalDuration"
-        Me.txtTotalDuration.Size = New System.Drawing.Size(85, 20)
+        Me.txtTotalDuration.Size = New System.Drawing.Size(120, 20)
         Me.txtTotalDuration.TabIndex = 68
         '
         'Label2
@@ -3030,11 +3004,6 @@ Partial Class Main
     Friend WithEvents WebBrowser1 As WebBrowser
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents txtTop As TextBox
-    Friend WithEvents Label15 As Label
-    Friend WithEvents txtLeft As TextBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents chkConnect As CheckBox
     Friend WithEvents btnOpenProject As Button
     Friend WithEvents Label13 As Label
@@ -3042,8 +3011,6 @@ Partial Class Main
     Friend WithEvents txtProNetName As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents btnOpenAppDir As Button
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label17 As Label
     Friend WithEvents btnOpenSystem As Button
     Friend WithEvents btnOpenData As Button
     Friend WithEvents btnOpenSettings As Button
@@ -3287,4 +3254,8 @@ Partial Class Main
     Friend WithEvents Label75 As Label
     Friend WithEvents Label76 As Label
     Friend WithEvents btnChartInfo As Button
+    Friend WithEvents btnOpenParentDir As Button
+    Friend WithEvents btnOpenArchive As Button
+    Friend WithEvents btnCreateArchive As Button
+    Friend WithEvents btnShowProjectInfo As Button
 End Class
